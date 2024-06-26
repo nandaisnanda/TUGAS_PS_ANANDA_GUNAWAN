@@ -1,0 +1,89 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-inline: 4rem;
+      margin-top: 3.2rem;
+    }
+  
+    &__title {
+      text-align: center;
+      color: black; /* Set text color to black */
+      z-index: 2;
+      position: relative;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border-radius: 10px; /* Optional: to make the background look nicer */
+      width: calc(100% - 8rem);
+    }
+  
+    &__line {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: black; /* Set line color to black */
+      margin: 0.5rem 0;
+    }
+  
+    &__image {
+      position: relative;
+      width: 100%;
+      height: auto;
+      max-height: 50vh; /* Restrict the height */
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+  
+      &Overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+  
+      &Element {
+        object-fit: cover;
+        border-radius: 1rem;
+        z-index: 2;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      &__top {
+        margin-inline: 2rem;
+        margin-top: 2rem;
+      }
+  
+      &__title {
+        font-size: 2rem;
+        width: calc(100% - 4rem);
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+      }
+  
+      &__line {
+        height: 2px;
+      }
+  
+      &__image {
+        max-height: 30vh; /* Adjust the max height for smaller screens */
+        margin-top: 1rem;
+      }
+    }
+  }
+  
