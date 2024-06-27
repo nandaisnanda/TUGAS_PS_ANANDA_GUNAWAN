@@ -1,0 +1,96 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
+  
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem; /* Add space between the elements */
+    margin-inline: 4rem;
+    margin-top: 3.2rem;
+    background-color: white; /* Set background color to white */
+    padding: 1rem; /* Optional: Add padding to create header-like appearance */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better separation */
+  }
+
+  &__title {
+    text-align: center;
+    color: black; /* Set text color to black */
+    z-index: 2;
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 10px; /* Optional: to make the background look nicer */
+    font-size: 5rem; /* Increase the font size */
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: black; /* Set line color to black */
+    margin: 0.5rem 0;
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 50vh; /* Restrict the height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    &Overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    &Element {
+      object-fit: cover;
+      border-radius: 1rem;
+      z-index: 2;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    &__top {
+      margin-inline: 2rem;
+      margin-top: 2rem;
+      padding: 0.5rem; /* Adjust padding for smaller screens */
+      gap: 1rem; /* Adjust the gap for smaller screens */
+    }
+
+    &__title {
+      font-size: 3rem; /* Increase the font size for smaller screens */
+      width: calc(100% - 4rem);
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+    }
+
+    &__line {
+      height: 2px;
+    }
+
+    &__image {
+      max-height: 30vh; /* Adjust the max height for smaller screens */
+      margin-top: 1rem;
+    }
+  }
+}
