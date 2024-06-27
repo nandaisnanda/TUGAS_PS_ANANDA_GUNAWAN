@@ -3,8 +3,8 @@
 import { useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
 
-import Loader from "@/components/Loader";
-import Hero from "@/components/Hero";
+import Loader from "./components/Loader";
+import Hero from "./components/Hero";
 
 const Home = () => {
   const [loaderFinished, setLoaderFinished] = useState(false);
