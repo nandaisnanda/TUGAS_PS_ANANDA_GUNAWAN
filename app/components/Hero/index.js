@@ -24,7 +24,16 @@ const Hero = () => {
     <section className={styles.hero} ref={heroRef}>
       <div className={styles.hero__top}>
         <span data-menu-item data-hidden>
+         Destination
+        </span>
+        <span data-menu-item data-hidden>
          Home
+        </span>
+        <span data-menu-item data-hidden>
+         About
+        </span>
+        <span data-menu-item data-hidden>
+         Plan
         </span>
         <span data-menu-item data-hidden>
           <Link href="/maps">Maps</Link>
