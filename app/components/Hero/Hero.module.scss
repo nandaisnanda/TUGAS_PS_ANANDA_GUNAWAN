@@ -4,38 +4,51 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center children vertically */
-  align-items: center; /* Center children horizontally */
-  
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  &--light {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &--dark {
+    --bg-color: #333333;
+    --text-color: #ffffff;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem; /* Add space between the elements */
+    gap: 2rem;
     margin-inline: 4rem;
     margin-top: 3.2rem;
-    background-color: white; /* Set background color to white */
-    padding: 1rem; /* Optional: Add padding to create header-like appearance */
-    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better separation */
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px var(--shadow-color);
   }
 
   &__title {
     text-align: center;
-    color: black; /* Set text color to black */
     z-index: 2;
     position: relative;
     margin-bottom: 2rem;
     padding: 1rem;
-    border-radius: 10px; /* Optional: to make the background look nicer */
-    font-size: 5rem; /* Increase the font size */
+    border-radius: 10px;
+    font-size: 5rem;
   }
 
   &__line {
     display: block;
     width: 100%;
     height: 1px;
-    background: black; /* Set line color to black */
+    background: var(--text-color);
     margin: 0.5rem 0;
   }
 
@@ -43,7 +56,7 @@
     position: relative;
     width: 100%;
     height: auto;
-    max-height: 50vh; /* Restrict the height */
+    max-height: 50vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -66,19 +79,17 @@
       z-index: 2;
     }
   }
-}
 
-@media (max-width: 768px) {
-  .hero {
+  @media (max-width: 768px) {
     &__top {
       margin-inline: 2rem;
       margin-top: 2rem;
-      padding: 0.5rem; /* Adjust padding for smaller screens */
-      gap: 1rem; /* Adjust the gap for smaller screens */
+      padding: 0.5rem;
+      gap: 1rem;
     }
 
     &__title {
-      font-size: 3rem; /* Increase the font size for smaller screens */
+      font-size: 3rem;
       width: calc(100% - 4rem);
       margin-bottom: 1rem;
       padding: 0.5rem;
@@ -89,8 +100,30 @@
     }
 
     &__image {
-      max-height: 30vh; /* Adjust the max height for smaller screens */
+      max-height: 30vh;
       margin-top: 1rem;
     }
   }
+}
+
+#theme-switcher {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--text-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.switch_circle {
+  width: 20px;
+  height: 20px;
+  background-color: var(--text-color);
+  border-radius: 50%;
 }

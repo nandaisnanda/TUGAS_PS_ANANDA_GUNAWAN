@@ -1,12 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
-import Link from "next/link";
-
 import styles from "./Hero.module.scss";
 import { animateTitle, animateImage, revealMenu } from "./animations";
 
 const Hero = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const timeline = useRef(gsap.timeline());
   const heroRef = useRef(null);
 
@@ -20,15 +19,28 @@ const Hero = () => {
     return () => context.revert();
   }, []);
 
+  const switchTheme = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+  };
+
   return (
-    <section className={styles.hero} ref={heroRef}>
+    <section
+      className={`${styles.hero} ${
+        isDarkMode ? styles["hero--dark"] : styles["hero--light"]
+      }`}
+      ref={heroRef}
+    >
       <div className={styles.hero__top}>
         <span data-menu-item data-hidden>Destination</span>
         <span data-menu-item data-hidden>Home</span>
         <span data-menu-item data-hidden>About</span>
         <span data-menu-item data-hidden>Plan</span>
         <span data-menu-item data-hidden>
-          <a href="https://uj1k.github.io/Peta_Navigasi_Jarak/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://uj1k.github.io/Peta_Navigasi_Jarak/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Maps
           </a>
         </span>
@@ -51,6 +63,10 @@ const Hero = () => {
           className={styles.hero__imageElement}
         />
       </div>
+
+      <button id="theme-switcher" onClick={switchTheme}>
+        <span className={styles.switch_circle}></span>
+      </button>
     </section>
   );
 };
