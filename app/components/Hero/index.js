@@ -28,7 +28,9 @@ const Hero = () => {
         <span data-menu-item data-hidden>About</span>
         <span data-menu-item data-hidden>Plan</span>
         <span data-menu-item data-hidden>
-          <Link href="https://uj1k.github.io/Peta_Navigasi_Jarak/">Maps</Link>
+          <a href="https://uj1k.github.io/Peta_Navigasi_Jarak/" target="_blank" rel="noopener noreferrer">
+            Maps
+          </a>
         </span>
       </div>
 
