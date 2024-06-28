@@ -23,31 +23,19 @@ const Hero = () => {
   return (
     <section className={styles.hero} ref={heroRef}>
       <div className={styles.hero__top}>
+        <span data-menu-item data-hidden>Destination</span>
+        <span data-menu-item data-hidden>Home</span>
+        <span data-menu-item data-hidden>About</span>
+        <span data-menu-item data-hidden>Plan</span>
         <span data-menu-item data-hidden>
-         Destination
-        </span>
-        <span data-menu-item data-hidden>
-         Home
-        </span>
-        <span data-menu-item data-hidden>
-         About
-        </span>
-        <span data-menu-item data-hidden>
-         Plan
-        </span>
-        <span data-menu-item data-hidden>
-          <Link href="uj1k.github.io/Peta_Navigasi_Jarak/">Maps</Link>
+          <Link href="https://uj1k.github.io/Peta_Navigasi_Jarak/">Maps</Link>
         </span>
       </div>
 
       <h1 className={styles.hero__title}>
-        <span data-hidden data-title-first>
-          Yogyakarta Maps
-        </span>
+        <span data-hidden data-title-first>Yogyakarta Maps</span>
         <span data-hero-line className={styles.hero__line}></span>
-        <span data-hidden data-title-last>
-          Project
-        </span>
+        <span data-hidden data-title-last>Project</span>
       </h1>
 
       <div className={styles.hero__image}>
