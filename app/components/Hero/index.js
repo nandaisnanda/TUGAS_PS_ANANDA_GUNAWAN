@@ -31,10 +31,7 @@ const Hero = () => {
       ref={heroRef}
     >
       <div className={styles.hero__top}>
-        <span data-menu-item data-hidden>Destination</span>
         <span data-menu-item data-hidden>Home</span>
-        <span data-menu-item data-hidden>About</span>
-        <span data-menu-item data-hidden>Plan</span>
         <span data-menu-item data-hidden>
           <a
             href="https://uj1k.github.io/Peta_Navigasi_Jarak/"
