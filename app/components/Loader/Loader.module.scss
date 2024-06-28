@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: white;
+    background-color: hsl(0, 0%, 100%);
     overflow: hidden;
     z-index: 2;
   
@@ -25,6 +25,7 @@
       position: relative;
       overflow: hidden;
       height: 41.8rem;
+      color: rgb(0, 0, 0);
     }
   
     &__overlay {
@@ -34,14 +35,14 @@
       z-index: 2;
       background: linear-gradient(
         to bottom,
-        rgba(255, 255, 255, 0.9),
-        rgba(255, 255, 255, 0.9) 47%,
+        rgb(255, 255, 255),
+        rgba(255, 255, 255, 0.842) 47%,
         transparent,
         transparent 47%,
         transparent,
         transparent 55%,
-        rgba(255, 255, 255, 0.9) 50%,
-        rgba(255, 255, 255, 0.9)
+        rgba(255, 255, 255, 0.884) 50%,
+        rgb(255, 255, 255)
       );
     }
   
@@ -74,8 +75,7 @@
       transform: translateY(-50%);
       z-index: 4;
       white-space: nowrap;
-      color: white;
+      color: rgba(255, 255, 255, 0.747);
       font-size: 3.2rem;
     }
   }
-  
