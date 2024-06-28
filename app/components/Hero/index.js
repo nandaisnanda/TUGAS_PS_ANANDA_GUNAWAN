@@ -55,7 +55,7 @@ const Hero = () => {
       <div className={styles.hero__image}>
         <Image
           data-image
-          src="/images/tugu.jpg"
+          src="/images/pljogja.jpg"
           layout="responsive"
           width={800}
           height={400}
