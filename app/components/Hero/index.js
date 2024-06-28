@@ -36,7 +36,7 @@ const Hero = () => {
          Plan
         </span>
         <span data-menu-item data-hidden>
-          <Link href="/maps">Maps</Link>
+          <Link href="https://uj1k.github.io/Peta_Navigasi_Jarak/">Maps</Link>
         </span>
       </div>
 
