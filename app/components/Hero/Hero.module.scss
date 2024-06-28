@@ -105,25 +105,3 @@
     }
   }
 }
-
-#theme-switcher {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 40px;
-  height: 40px;
-  background-color: var(--bg-color);
-  border: 1px solid var(--text-color);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.switch_circle {
-  width: 20px;
-  height: 20px;
-  background-color: var(--text-color);
-  border-radius: 50%;
-}
